@@ -1,0 +1,3 @@
+[run]
+source=argparse_subdec
+command_line = -m pytest -v

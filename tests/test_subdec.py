@@ -3,31 +3,31 @@ import argparse
 import argparse_subdec
 
 
-def test_command_decorator():
+def test_command_decorator() -> None:
     sd = argparse_subdec.SubDec()
 
     @sd.cmd()
-    def foo():
+    def foo() -> None:
         pass
 
     @sd.cmd()
-    def two_words():
+    def two_words() -> None:
         pass
 
     @sd.add_argument('--option-for-bar')
     @sd.add_argument('--another-option-for-bar')
-    def bar():
+    def bar() -> None:
         pass
 
     @sd.cmd('changed-name')
     @sd.add_argument('--option')
-    def original_name():
+    def original_name() -> None:
         pass
 
     # Test changing order of decorators
     @sd.add_argument('--option')
     @sd.cmd('changed-name-2')
-    def another_original_name():
+    def another_original_name() -> None:
         pass
 
     parser = argparse.ArgumentParser()

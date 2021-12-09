@@ -6,6 +6,11 @@ Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## Unreleased
+### Added
+- Added support for typing (tested with mypy).
+
+
 ## 0.1.0 - 2021-11-23
 ### Added
 - First release!

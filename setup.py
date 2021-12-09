@@ -5,6 +5,7 @@ import setuptools
 extra_dependencies = {
     'pytest~=6.2': ['dev', 'tests'],
     'coverage~=5.5': ['dev', 'tests'],
+    'mypy>=0.910<1': ['dev'],
 }
 extras_require = {'all': []}
 for dep, topics in extra_dependencies.items():

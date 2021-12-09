@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import argparse
 import collections.abc as C
-import typing as T
+import typing as ty
 
 
 class SubDec:
@@ -118,7 +118,7 @@ class SubDec:
         self.__decorators_cache[name] = decorator_wrapper
         return decorator_wrapper
 
-    def __get_command(self, fn: T.Callable):
+    def __get_command(self, fn: ty.Callable):
         if fn not in self.__commands:
             self.__commands[fn] = {
                 'name': None,
@@ -128,7 +128,7 @@ class SubDec:
             }
         return self.__commands[fn]
 
-    def __create_parser(self, cmd: dict, subparsers: T.Any):
+    def __create_parser(self, cmd: dict, subparsers: ty.Any):
         name = cmd['name']
         if not name:
             name = cmd['fn'].__name__

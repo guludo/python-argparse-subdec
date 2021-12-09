@@ -17,7 +17,7 @@ for dep, topics in extra_dependencies.items():
 
 setuptools.setup(
     name='argparse-subdec',
-    version='0.2.0',
+    version='0.2.1',
     long_description=(pathlib.Path(__file__).parent / 'README.rst').read_text(),
     long_description_content_type='text/x-rst',
     url='https://github.com/guludo/python-argparse-subdec',

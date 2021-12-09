@@ -7,6 +7,9 @@ Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 
 
 ## Unreleased
+- Nothing yet.
+
+## 0.2.0 - 2021-12-09
 ### Added
 - Added support for typing (tested with mypy).
 

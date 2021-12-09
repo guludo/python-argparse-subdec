@@ -7,7 +7,8 @@ Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 
 
 ## Unreleased
-- Nothing yet.
+### Fixed
+- Added missing bits to support typing.
 
 ## 0.2.0 - 2021-12-09
 ### Added

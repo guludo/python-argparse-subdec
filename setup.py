@@ -22,6 +22,9 @@ setuptools.setup(
     long_description_content_type='text/x-rst',
     url='https://github.com/guludo/python-argparse-subdec',
     packages=['argparse_subdec'],
+    package_data={
+        'argparse_subdec': ['py.typed'],
+    },
     extras_require=extras_require,
     classifiers=[
         'Development Status :: 4 - Beta',

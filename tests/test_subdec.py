@@ -30,6 +30,10 @@ def test_command_decorator() -> None:
     def another_original_name() -> None:
         pass
 
+    @sd.arg('--foo', action='store_true')
+    def using_arg_alias() -> None:
+        pass
+
     parser = argparse.ArgumentParser()
     subparsers = parser.add_subparsers()
     sd.create_parsers(subparsers)
@@ -65,5 +69,12 @@ def test_command_decorator() -> None:
     expected_args = argparse.Namespace(
         fn=another_original_name,
         option=None,
+    )
+    assert args == expected_args
+
+    args = parser.parse_args(['using-arg-alias', '--foo'])
+    expected_args = argparse.Namespace(
+        fn=using_arg_alias,
+        foo=True,
     )
     assert args == expected_args

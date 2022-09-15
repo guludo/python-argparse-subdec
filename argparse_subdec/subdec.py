@@ -138,6 +138,12 @@ class SubDec:
             return fn
         return decorator
 
+    def arg(self, *k: ty.Any, **kw: ty.Any) -> AnyDecoratorFactory:
+        """
+        Alias for ``self.add_argument(*k, **kw)``.
+        """
+        return self.add_argument(*k, **kw)
+
     def __getattr__(self, name: str) -> AnyDecoratorFactory:
         if name in self.__decorators_cache:
             return self.__decorators_cache[name]

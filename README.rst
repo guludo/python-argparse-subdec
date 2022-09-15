@@ -31,6 +31,15 @@ above, we used ``add_argument``, probably most commonly used. When creating
 the subparsers, ``sd`` will replay those calls to the created subparser for
 the ``foo`` subcommand.
 
+Since using ``sd.add_argument()`` is so common, there is an alias to save some
+keystrokes. The example below is the equivalent of the above using the alias:
+
+.. code:: python
+
+  @sd.arg('--option', default='123')
+  @sd.arg('--another')
+  def foo(args):
+      print(f'foo subcommand: --option={args.option!r} and --another={args.another!r}')
 
 In the example below we define a second subcommand, which will be named
 ``foo-bar``:
